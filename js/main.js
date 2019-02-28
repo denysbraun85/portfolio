@@ -10,3 +10,11 @@ $('.portfolio-card-container').magnificPopup({
     type: 'image'
 });
 /*=================magnific popup======================*/
+
+// $(document).ready(function(){
+//     var emailInput = $('#email').val();
+//     if(emailInput !== " ") {
+//         $(this).prop('valid', true);
+//         console.log(emailInput)
+//     }
+// });

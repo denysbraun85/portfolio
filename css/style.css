@@ -500,3 +500,105 @@ section {
             color: #ffffff; }
 
 /*===============portfolio===============*/
+/*===============CONTACT===============*/
+.section-contact {
+  position: relative;
+  background-color: #50585b; }
+  .section-contact .contact-container .btn-submit {
+    position: relative;
+    display: block;
+    text-align: center;
+    margin: 2rem auto auto;
+    width: 18rem;
+    height: 5rem;
+    background: #50585b;
+    border: none;
+    color: #0088cc;
+    font-size: 2rem;
+    outline: none;
+    z-index: 1;
+    cursor: pointer; }
+    .section-contact .contact-container .btn-submit:hover:before, .section-contact .contact-container .btn-submit:hover:after {
+      width: -webkit-calc(18rem / 2);
+      width: calc(18rem / 2);
+      height: -webkit-calc(5rem / 2);
+      height: calc(5rem / 2); }
+    .section-contact .contact-container .btn-submit:hover span:before, .section-contact .contact-container .btn-submit:hover span:after {
+      width: -webkit-calc(18rem / 2);
+      width: calc(18rem / 2);
+      height: -webkit-calc(5rem / 2);
+      height: calc(5rem / 2); }
+    .section-contact .contact-container .btn-submit:before, .section-contact .contact-container .btn-submit:after {
+      content: '';
+      position: absolute;
+      width: 1rem;
+      height: 1rem;
+      background: #0088cc;
+      -webkit-transition: 0.5s;
+      -o-transition: 0.5s;
+      transition: 0.5s;
+      mix-blend-mode: hue; }
+    .section-contact .contact-container .btn-submit:before {
+      top: -0.2rem;
+      left: -0.2rem; }
+    .section-contact .contact-container .btn-submit:after {
+      top: -0.2rem;
+      right: -0.2rem; }
+    .section-contact .contact-container .btn-submit span:before, .section-contact .contact-container .btn-submit span:after {
+      content: '';
+      position: absolute;
+      width: 1rem;
+      height: 1rem;
+      background: #0088cc;
+      -webkit-transition: 0.5s;
+      -o-transition: 0.5s;
+      transition: 0.5s;
+      mix-blend-mode: hue; }
+    .section-contact .contact-container .btn-submit span:before {
+      bottom: -0.2rem;
+      left: -0.2rem; }
+    .section-contact .contact-container .btn-submit span:after {
+      bottom: -0.2rem;
+      right: -0.2rem; }
+  .section-contact .contact-container .input-container {
+    position: relative; }
+    .section-contact .contact-container .input-container input, .section-contact .contact-container .input-container textarea {
+      width: 100%;
+      padding: 1rem 0;
+      font-size: 2rem;
+      line-height: 2rem;
+      color: #ffffff;
+      margin-bottom: 3rem;
+      border: none;
+      border-bottom: 0.1rem solid #ffffff;
+      outline: none;
+      background: transparent;
+      letter-spacing: 0.1rem; }
+      .section-contact .contact-container .input-container input:focus ~ label, .section-contact .contact-container .input-container input:valid ~ label, .section-contact .contact-container .input-container textarea:focus ~ label, .section-contact .contact-container .input-container textarea:valid ~ label {
+        top: -2rem;
+        left: 0;
+        color: #0088cc;
+        font-size: 1.5rem; }
+    .section-contact .contact-container .input-container #email:placeholder-shown ~ label {
+      top: -2rem;
+      left: 0;
+      color: #0088cc;
+      font-size: 1.5rem; }
+    .section-contact .contact-container .input-container label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 1rem 0;
+      font-size: 2rem;
+      line-height: 2rem;
+      color: #ffffff;
+      pointer-events: none;
+      -webkit-transition: 0.5s;
+      -o-transition: 0.5s;
+      transition: 0.5s;
+      letter-spacing: 0.1rem; }
+    .section-contact .contact-container .input-container textarea {
+      width: 100%;
+      padding-top: 2rem; }
+
+/*===============contact===============*/
