@@ -11,10 +11,25 @@ $('.portfolio-card-container').magnificPopup({
 });
 /*=================magnific popup======================*/
 
-// $(document).ready(function(){
-//     var emailInput = $('#email').val();
-//     if(emailInput !== " ") {
-//         $(this).prop('valid', true);
-//         console.log(emailInput)
-//     }
-// });
+/*=================EMAIL VALIDATION======================*/
+var emailInput;
+
+$("#email").on("change", function() {
+    emailInput = $(this).val();
+});
+
+$(".btn-submit").on("click", function(e) {
+    // e.preventDefault();
+    if (validateEmail(emailInput)) {
+    } else {
+        alert('Incorrect email');
+        return false;
+    }
+});
+
+function validateEmail(email) {
+    var pattern = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+
+    return !!$.trim(email).match(pattern);
+}
+/*=================email validation======================*/

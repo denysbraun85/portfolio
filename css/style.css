@@ -503,7 +503,7 @@ section {
 /*===============CONTACT===============*/
 .section-contact {
   position: relative;
-  background-color: #50585b; }
+  background-color: #3d5a68; }
   .section-contact .contact-container .btn-submit {
     position: relative;
     display: block;
@@ -511,7 +511,7 @@ section {
     margin: 2rem auto auto;
     width: 18rem;
     height: 5rem;
-    background: #50585b;
+    background: #3d5a68;
     border: none;
     color: #0088cc;
     font-size: 2rem;
@@ -579,11 +579,11 @@ section {
         left: 0;
         color: #0088cc;
         font-size: 1.5rem; }
-    .section-contact .contact-container .input-container #email:placeholder-shown ~ label {
-      top: -2rem;
-      left: 0;
-      color: #0088cc;
-      font-size: 1.5rem; }
+      .section-contact .contact-container .input-container input:not(:focus):valid ~ label, .section-contact .contact-container .input-container textarea:not(:focus):valid ~ label {
+        top: -2rem;
+        left: 0;
+        color: #0088cc;
+        font-size: 1.5rem; }
     .section-contact .contact-container .input-container label {
       position: absolute;
       top: 0;
@@ -602,3 +602,8 @@ section {
       padding-top: 2rem; }
 
 /*===============contact===============*/
+/*===============FOOTER===============*/
+footer .footer-container {
+  background-color: #212b2d; }
+
+/*===============footer===============*/
