@@ -78,3 +78,33 @@ $(function(){
     });
 });
 /*===============================================phone validation=====================================================*/
+
+/*===============================================BACK TO TOP BUTTON===================================================*/
+$(window).on('scroll', function(){
+    var wScroll = $(this).scrollTop();
+    if(wScroll > 700){
+        $('#back-btn').fadeIn();
+    }else{
+        $('#back-btn').fadeOut();
+    }
+});
+$('#back-btn').on('click', function(){
+    $('body,html').animate({
+        scrollTop: 0
+    }, 600);
+});
+/*==============================================back to top button====================================================*/
+
+/*==================================================SCROLL SPY========================================================*/
+$('body').scrollspy({
+    target: '#nav',
+    offset: $(window).height() / 2
+});
+$("main nav a[href^='#']").on('click', function(e) {
+    e.preventDefault();
+    var hash = this.hash;
+    $('html, body').animate({
+        scrollTop: $(this.hash).offset().top
+    }, 600);
+});
+/*==================================================scroll spy========================================================*/
