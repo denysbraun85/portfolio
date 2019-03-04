@@ -603,7 +603,31 @@ section {
 
 /*===============contact===============*/
 /*===============FOOTER===============*/
-footer .footer-container {
+footer {
   background-color: #212b2d; }
+  footer .footer-container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem; }
+    footer .footer-container a {
+      margin-left: 1rem;
+      margin-right: 1rem;
+      color: #ffffff; }
+      footer .footer-container a:hover {
+        color: #0088cc; }
+      footer .footer-container a i {
+        font-size: 4rem; }
+  footer p {
+    display: block;
+    color: #ffffff;
+    font-size: 1.2rem;
+    text-align: center; }
 
 /*===============footer===============*/
