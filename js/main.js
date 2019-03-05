@@ -34,8 +34,6 @@ function validateEmail(email) {
 }
 /*=============================================email validation=======================================================*/
 
-
-
 /*=============================================PHONE VALIDATION=======================================================*/
 function clearVal(val, limit){
     var newVal = val.replace(/[^\d]+/g, '');
@@ -100,11 +98,56 @@ $('body').scrollspy({
     target: '#nav',
     offset: $(window).height() / 2
 });
-$("main nav a[href^='#']").on('click', function(e) {
-    e.preventDefault();
-    var hash = this.hash;
-    $('html, body').animate({
-        scrollTop: $(this.hash).offset().top
-    }, 600);
-});
 /*==================================================scroll spy========================================================*/
+
+/*================================================SMOOTH SCROLL=======================================================*/
+$(document).ready(function(){
+    // Add smooth scrolling to all links
+    $("#nav").find("a").on('click', function(event) {
+
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 600, function(){
+
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+            });
+        } // End if
+    });
+});
+/*================================================smooth scroll=======================================================*/
+
+/*==================================================SCROLL NAV========================================================*/
+$(window).scroll(function() {
+    var scrollDistance = $(window).scrollTop();
+    $('.page-section').each(function(i) {
+        if ($(this).position().top <= scrollDistance) {
+            $('#nav').find('ul li a.active').removeClass('active');
+            $('#nav').find('ul li a').eq(i).addClass('active');
+        }
+    });
+}).scroll();
+/*==================================================scroll nav========================================================*/
+
+/*===================================================FIXED NAV========================================================*/
+$(window).on('scroll', function() {
+    var scroll = $(this).scrollTop();
+    if(scroll > 1){
+        $('#nav').addClass('fixed-nav');
+    }else{
+        $('#nav').removeClass('fixed-nav');
+    }
+});
+/*===================================================fixed nav========================================================*/
+
+
