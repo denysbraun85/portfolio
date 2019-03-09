@@ -557,13 +557,40 @@ section {
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between; }
-    .section-about .skills-container .skill:nth-of-type(2) .skill-scale .skill-persent {
+    .section-about .skills-container .skill:nth-of-type(1) .skill-scale .skill-percent {
+      width: 15%;
+      -webkit-transition: 2s width;
+      -o-transition: 2s width;
+      transition: 2s width; }
+    .section-about .skills-container .skill:nth-of-type(1) .skill-scale .number-scroll-active-1 {
+      width: 90%; }
+    .section-about .skills-container .skill:nth-of-type(2) .skill-scale .skill-percent {
+      width: 15%;
+      -webkit-transition: 2s width;
+      -o-transition: 2s width;
+      transition: 2s width; }
+    .section-about .skills-container .skill:nth-of-type(2) .skill-scale .number-scroll-active-2 {
       width: 80%; }
-    .section-about .skills-container .skill:nth-of-type(3) .skill-scale .skill-persent {
+    .section-about .skills-container .skill:nth-of-type(3) .skill-scale .skill-percent {
+      width: 15%;
+      -webkit-transition: 2s width;
+      -o-transition: 2s width;
+      transition: 2s width; }
+    .section-about .skills-container .skill:nth-of-type(3) .skill-scale .number-scroll-active-3 {
       width: 65%; }
-    .section-about .skills-container .skill:nth-of-type(4) .skill-scale .skill-persent {
+    .section-about .skills-container .skill:nth-of-type(4) .skill-scale .skill-percent {
+      width: 15%;
+      -webkit-transition: 2s width;
+      -o-transition: 2s width;
+      transition: 2s width; }
+    .section-about .skills-container .skill:nth-of-type(4) .skill-scale .number-scroll-active-4 {
       width: 60%; }
-    .section-about .skills-container .skill:nth-of-type(5) .skill-scale .skill-persent {
+    .section-about .skills-container .skill:nth-of-type(5) .skill-scale .skill-percent {
+      width: 15%;
+      -webkit-transition: 2s width;
+      -o-transition: 2s width;
+      transition: 2s width; }
+    .section-about .skills-container .skill:nth-of-type(5) .skill-scale .number-scroll-active-5 {
       width: 50%; }
     .section-about .skills-container .skill .skill-name {
       font-size: 1.8rem; }
@@ -573,7 +600,7 @@ section {
       max-height: 2rem;
       margin-top: auto;
       margin-bottom: auto; }
-      .section-about .skills-container .skill .skill-scale .skill-persent {
+      .section-about .skills-container .skill .skill-scale .skill-percent {
         margin: 0;
         font-size: 1.2rem;
         line-height: 2rem;
@@ -582,6 +609,8 @@ section {
         width: 90%;
         text-align: right;
         padding-right: 0.5rem; }
+        .section-about .skills-container .skill .skill-scale .skill-percent:after {
+          content: ' %'; }
 
 /*=====================================================about==========================================================*/
 /*===================================================PORTFOLIO========================================================*/

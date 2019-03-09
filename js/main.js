@@ -157,3 +157,62 @@ $('.nav-bar-collapse').on('click', function(){
     $('nav ul').toggleClass('open');
 });
 /*=============================================nav-collapse-button====================================================*/
+
+/*==============================================COUNT CALCULATING=====================================================*/
+// function calcCount() {
+//     for (var i = 0; i < $('.number').length; i++) {
+//         var end = $('.number').eq(i).text();
+//         countStart(end, i);
+//     }
+// }
+//
+// function countStart(end, i) {
+//     var start = 0;
+//     var interval = setInterval(function () {
+//         $('.number').eq(i).text(++start);
+//         if (start == end) {
+//             clearInterval(interval);
+//         }
+//     }, 50);//скорость менять вот-тута
+// }
+// calcCount();
+/*==============================================count calculating=====================================================*/
+var a = 0;
+$(window).scroll(function() {
+
+    var oTop = $('.skill').offset().top - window.innerHeight;
+    if (a === 0 && $(window).scrollTop() > oTop) {
+        $('.number').each(function() {
+            var $this = $(this),
+                countTo = $this.attr('data-count');
+            $({
+                countNum: $this.text()
+            }).animate({
+                    countNum: countTo
+                },
+
+                {
+
+                    duration: 2000,
+                    easing: 'swing',
+                    step: function() {
+                        $this.text(Math.floor(this.countNum));
+                    },
+                    complete: function() {
+                        $this.text(this.countNum);
+                        //alert('finished');
+                    }
+
+                });
+            // language=JQuery-CSS
+            /*======================Width animation=======================*/
+            $('#number-scroll-active-1').addClass('number-scroll-active-1');
+            $('#number-scroll-active-2').addClass('number-scroll-active-2');
+            $('#number-scroll-active-3').addClass('number-scroll-active-3');
+            $('#number-scroll-active-4').addClass('number-scroll-active-4');
+            $('#number-scroll-active-5').addClass('number-scroll-active-5');
+        });
+        a = 1;
+    }
+
+});
