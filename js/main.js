@@ -150,7 +150,6 @@ $(window).on('scroll', function() {
 });
 /*===================================================fixed nav========================================================*/
 
-/* Nav-collapse button */
 /*=============================================NAV-COLLAPSE-BUTTON====================================================*/
 $('.nav-bar-collapse').on('click', function(){
     $(this).toggleClass('nav-collapse-active');
@@ -159,24 +158,6 @@ $('.nav-bar-collapse').on('click', function(){
 /*=============================================nav-collapse-button====================================================*/
 
 /*==============================================COUNT CALCULATING=====================================================*/
-// function calcCount() {
-//     for (var i = 0; i < $('.number').length; i++) {
-//         var end = $('.number').eq(i).text();
-//         countStart(end, i);
-//     }
-// }
-//
-// function countStart(end, i) {
-//     var start = 0;
-//     var interval = setInterval(function () {
-//         $('.number').eq(i).text(++start);
-//         if (start == end) {
-//             clearInterval(interval);
-//         }
-//     }, 50);//скорость менять вот-тута
-// }
-// calcCount();
-/*==============================================count calculating=====================================================*/
 var a = 0;
 $(window).scroll(function() {
 
@@ -216,3 +197,8 @@ $(window).scroll(function() {
     }
 
 });
+/*==============================================count calculating=====================================================*/
+
+/*==============================================WOW JS ANIMATION======================================================*/
+new WOW().init();
+/*==============================================wow js animation======================================================*/
